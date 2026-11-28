@@ -3,7 +3,7 @@ const prisma = require("../config/db");
 const insertUser = async (req, res) => {
   try {
     const { externalId, username, createdAt } = req.body;
-
+     
     const user = await prisma.user.create({
       data: {
         externalId,
